@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 struct Node
 {
     string page;
@@ -28,8 +27,7 @@ void goBack()
         cout << "No history available!" << endl;
         return;
     }
-
-    cout << "Back from: " << top->page << endl;
+   cout << "Back from: " << top->page << endl;
 
     Node* temp = top;
     top = top->next;
