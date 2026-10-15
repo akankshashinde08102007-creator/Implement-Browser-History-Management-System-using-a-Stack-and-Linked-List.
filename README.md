@@ -131,7 +131,16 @@ Previous page: www.google.com
 Enter your choice: 4
 Thank you!
 
----
+ Features
+
+- Insert employee IDs into a Binary Search Tree.
+- Search for employee IDs efficiently.
+- Find the Lowest Common Ancestor (LCA) of two given employee IDs.
+- Use BST properties to determine the LCA.
+- Accept employee IDs as user input.
+- Display the result clearly.
+- Handle different employee ID combinations.
+- Demonstrate tree-based searching operations.
 
 Time Complexity
 
