@@ -1,4 +1,4 @@
-Develop Browser History Management System Using Stack with Linked List
+Implement Browser History Management System Using Stack and Linked List
 
 Problem Statement
 
