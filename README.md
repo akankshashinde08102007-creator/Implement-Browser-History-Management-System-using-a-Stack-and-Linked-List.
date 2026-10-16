@@ -31,7 +31,7 @@ This project helps us understand how data structures are used in practical appli
 Step 1: Start the program.
 
 
-Step 2: Initialize the required stacks and linked list.
+Step 2: Initialize the required stacks  and linked list.
 
 
 Step 3: Display the main menu.
