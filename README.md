@@ -58,43 +58,6 @@ Step 11: Repeat the menu until the user selects Exit.
 
 Step 12: Stop the program.
 
-•Flowchart
-
-             START
-               |
-               v
-   Initialize Stack and Linked List
-               |
-               v
-       Display Main Menu
-               |
-               v
-        Enter User Choice
-               |
-               v
-       Select an Operation
-               |
-     +---------+---------+
-     |         |         |
-     v         v         v
-   Visit     Go Back   Go Forward
-    Page      Page       Page
-     |         |         |
-     +---------+---------+
-               |
-               v
-      Display Browser History
-               |
-               v
-       Check Exit Choice
-               |
-          +----+----+
-          |         |
-         Yes        No
-          |         |
-          v         v
-         STOP   Display Menu
-
 •Data Structures Used
 
 A. Stack
