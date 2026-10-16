@@ -1,11 +1,25 @@
 Visited: Google
 Visited: YouTube
 Visited: GitHub
-Browser History: GitHub YouTube Google
-Back from: GitHub
-Browser History: YouTube Google
+Visited: Facebook
+Visited: Instagram
+Visited: LinkedIn
+Visited: Amazon
+Visited: Wikipedia
 
---------------------------------
-Process exited after 2.336 seconds with return value 0
-Press any key to continue . . .
+Browser History: Wikipedia Amazon LinkedIn Instagram Facebook GitHub YouTube Google
+
+Back from: Wikipedia
+Browser History: Amazon LinkedIn Instagram Facebook GitHub YouTube Google
+
+Back from: Amazon
+
+Browser History: LinkedIn Instagram Facebook GitHub YouTube Google
+Visited: Twitter
+
+Browser History: Twitter LinkedIn Instagram Facebook GitHub YouTube Google
+
+Back from: Twitter
+
+Browser History: LinkedIn Instagram Facebook GitHub YouTube Google
 
