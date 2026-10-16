@@ -1,157 +1,200 @@
 Implement Browser History Management System Using Stack and Linked List
 
-Problem Statement
+1. Problem Statement
 
-To develop a Browser History Management System using a stack implemented with a linked list in C++.
+To implement a Browser History Management System using Stack and Linked List in C++. The system allows users to visit new web pages, navigate back to previously visited pages, move forward to the next page, and display browser history. The project demonstrates the practical application of Stack and Linked List data structures in browser navigation.
 
-The system should allow the user to:
+2. Objectives
 
-1. Visit a new web page.
-2. Go back to the previous page.
-3. Display browser history.
-4. Exit the program.
+1. To understand the concept of Stack and Linked List.
+2. To implement browser history management using data structures.
+3. To allow users to visit new web pages.
+4. To provide backward navigation to previously visited pages.
+5. To provide forward navigation to the next page.
+6. To display the browsing history.
+7. To understand the practical application of data structures in real-world systems.
 
-The stack is used to manage visited web pages dynamically.
+3. Introduction
 
----
+A Browser History Management System is an application that simulates the basic history management functionality of a web browser.
 
-Algorithm
+A Stack is a linear data structure that follows the Last In, First Out (LIFO) principle. It is useful for managing backward and forward navigation between web pages.
 
-Step 1: Start
+A Linked List is a linear data structure in which each node contains data and a pointer to the next node. It allows web page information to be stored dynamically.
 
-Initialize the top pointer of the stack to "NULL".
+In this project, Stack and Linked List are used to manage visited web pages. The system provides a menu-driven interface that allows users to visit new pages, go back, move forward, display browser history, and exit the program.
 
-Step 2: Display Menu
+This project helps us understand how data structures are used in practical applications.
 
-Display the following options:
+4. Algorithm
 
-- Visit New Page
-- Go Back
-- Display Browser History
-- Exit
+Step 1: Start the program.
 
-Step 3: Visit New Page
+Step 2: Initialize the required stacks and linked list.
 
-1. Create a new node dynamically.
-2. Read the web page URL.
-3. Store the URL in the new node.
-4. Connect the new node to the existing stack.
-5. Update the top pointer.
+Step 3: Display the main menu.
 
-Step 4: Go Back
+Step 4: Accept the user's choice.
 
-1. Check whether the stack is empty.
-2. Remove the top node if available.
-3. Update the top pointer.
-4. Display the previous page.
+Step 5: Perform the selected operation:
 
-Step 5: Display Browser History
+- Choice 1: Visit a new web page.
+- Choice 2: Go back to the previous page.
+- Choice 3: Move forward to the next page.
+- Choice 4: Display browser history.
+- Choice 5: Exit the program.
 
-1. Start from the top node.
-2. Display each web page URL.
-3. Continue until the pointer becomes "NULL".
+Step 6: If the user selects Visit New Page, store the new page and update the history.
 
-Step 6: Exit
+Step 7: If the user selects Go Back, navigate to the previous page if available.
 
-Terminate the program when the user selects Exit.
+Step 8: If the user selects Go Forward, navigate to the next page if available.
 
----
+Step 9: If the user selects Display History, display the stored browsing history.
 
-Explanation
+Step 10: Display an appropriate message for invalid choices or unavailable navigation.
 
-A stack is a linear data structure that follows the Last In, First Out (LIFO) principle.
+Step 11: Repeat the menu until the user selects Exit.
 
-Each node contains two parts:
+Step 12: Stop the program.
 
-- URL: Stores the web page address.
-- Next: Stores the address of the next node.
+5. Flowchart
 
-The "top" pointer points to the top node of the stack. New pages are added using the push operation, and the current page is removed using the pop operation.
+             START
+               |
+               v
+   Initialize Stack and Linked List
+               |
+               v
+       Display Main Menu
+               |
+               v
+        Enter User Choice
+               |
+               v
+       Select an Operation
+               |
+     +---------+---------+
+     |         |         |
+     v         v         v
+   Visit     Go Back   Go Forward
+    Page      Page       Page
+     |         |         |
+     +---------+---------+
+               |
+               v
+      Display Browser History
+               |
+               v
+       Check Exit Choice
+               |
+          +----+----+
+          |         |
+         Yes        No
+          |         |
+          v         v
+         STOP   Display Menu
 
----
+6. Data Structures Used
 
-Data Structure Used
+A. Stack
 
-Stack using Singly Linked List
+A Stack is a linear data structure that follows the Last In, First Out (LIFO) principle.
 
-Node Structure
+In this project, stacks are used to manage backward and forward navigation between web pages.
 
-struct Node {
-    string url;
-    Node* next;
-};
+Basic Stack Operations:
 
----
+- Push: Adds an element to the stack.
+- Pop: Removes the top element from the stack.
+- Top: Returns the top element without removing it.
 
-Sample Input
+B. Linked List
 
-1
+A Linked List is a linear data structure consisting of nodes. Each node stores data and a pointer to another node.
 
-www.google.com
+In this project, a linked list is used to store browser history dynamically.
 
-1
+Advantages of Linked List:
 
-www.youtube.com
+- Supports dynamic memory allocation.
+- Allows insertion and deletion of nodes.
+- Stores data without requiring a fixed-size array.
+- Helps demonstrate dynamic data management.
 
-3
+7. Working of the System
 
-2
+The system displays a menu to the user and performs operations according to the selected choice.
 
-4
+1. Visit New Page: The user enters a website name, and the system stores the page in the browsing history.
+2. Go Back: The system navigates to the previously visited page if one exists.
+3. Go Forward: The system navigates to the next available page if one exists.
+4. Display History: The system displays the stored browsing history.
+5. Exit: The program terminates.
 
----
+The program continues running until the user selects the Exit option.
 
-Sample Output
-
-===== Browser History Management System =====
+8. Sample Input
 
 1. Visit New Page
 2. Go Back
-3. Display Browser History
-4. Exit
+3. Go Forward
+4. Display History
+5. Exit
 
-Enter your choice: 1
-Enter URL: www.google.com
-Page visited successfully!
+Enter choice: 1
+Enter website name: Google
 
-Enter your choice: 1
-Enter URL: www.youtube.com
-Page visited successfully!
+Enter choice: 1
+Enter website name: YouTube
 
-Enter your choice: 3
+Enter choice: 2
 
---- Browser History ---
-www.youtube.com
-www.google.com
+9. Sample Output
 
-Enter your choice: 2
-Going back from: www.youtube.com
-Previous page: www.google.com
+Page visited: Google
+Page visited: YouTube
 
-Enter your choice: 4
-Thank you!
+Going back...
+Current page: Google
 
- Features
+10. Time Complexity
 
-- Insert employee IDs into a Binary Search Tree.
-- Search for employee IDs efficiently.
-- Find the Lowest Common Ancestor (LCA) of two given employee IDs.
-- Use BST properties to determine the LCA.
-- Accept employee IDs as user input.
-- Display the result clearly.
-- Handle different employee ID combinations.
-- Demonstrate tree-based searching operations.
+Let n represent the number of stored web pages.
 
-Time Complexity
+Operation| Time Complexity
+Push into Stack| O(1)
+Pop from Stack| O(1)
+Visit a new page| O(1), with suitable stack operations
+Display browser history| O(n)
+Traverse a linked list| O(n)
 
-- Visit New Page: O(1)
-- Go Back: O(1)
-- Display Browser History: O(n)
+Note: The actual time complexity depends on the implementation of the stacks and linked list.
 
-Here, "n" is the number of web pages stored in the stack.
+11. Features
 
----
+1. Visit new web pages.
+2. Navigate to the previous page.
+3. Navigate to the next page.
+4. Display visited web pages.
+5. Store web page information dynamically.
+6. Handle empty history and unavailable navigation.
+7. Provide a menu-driven interface.
+8. Demonstrate the use of Stack and Linked List.
+9. Simulate basic browser navigation.
 
-Conclusion
+12. Applications
 
-The Browser History Management System was successfully developed using a stack with a linked list in C++. It allows users to visit pages, go back, and display browser history.
+1. Web browser history management.
+2. Backward and forward navigation systems.
+3. Learning stack operations.
+4. Understanding dynamic data structures.
+5. Educational demonstrations of data structures.
+
+13. Result
+
+The Browser History Management System demonstrates the implementation of browser navigation using Stack and Linked List in C++. It provides basic operations such as visiting new pages, navigating backward and forward, and displaying browsing history.
+
+14. Conclusion
+
+The Browser History Management System is implemented using Stack and Linked List in C++. The project demonstrates how stack operations can be used for backward and forward navigation and how a linked list can store web page information dynamically. It helps us understand the practical application of data structures in real-world systems. This project improves our knowledge of C++ programming, Stack, Linked List, and browser history management.
