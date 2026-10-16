@@ -2,7 +2,7 @@ Implement Browser History Management System Using Stack and Linked List
 
 1. Problem Statement
 
-To implement a Browser History Management System using Stack and Linked List in C++. The system allows users to visit new web pages, navigate back to previously visited pages, move forward to the next page, and display browser history. The project demonstrates the practical application of Stack and Linked List data structures in browser navigation.
+To implement a Browser History Management System using Stack and Linked List in C++.The system allows users to visit new web pages, navigate back to previously visited pages, move forward to the next page, and display browser history. The project demonstrates the practical application of Stack and Linked List data structures in browser navigation.
 
 2. Objectives
 
