@@ -30,11 +30,15 @@ This project helps us understand how data structures are used in practical appli
 
 Step 1: Start the program.
 
+
 Step 2: Initialize the required stacks and linked list.
+
 
 Step 3: Display the main menu.
 
+
 Step 4: Accept the user's choice.
+
 
 Step 5: Perform the selected operation:
 
@@ -44,21 +48,30 @@ Step 5: Perform the selected operation:
 - Choice 4: Display browser history.
 - Choice 5: Exit the program.
 
+
 Step 6: If the user selects Visit New Page, store the new page and update the history.
+
 
 Step 7: If the user selects Go Back, navigate to the previous page if available.
 
+
 Step 8: If the user selects Go Forward, navigate to the next page if available.
+
 
 Step 9: If the user selects Display History, display the stored browsing history.
 
+
 Step 10: Display an appropriate message for invalid choices or unavailable navigation.
+
 
 Step 11: Repeat the menu until the user selects Exit.
 
+
 Step 12: Stop the program.
 
+
 •Data Structures Used
+
 
 A. Stack
 
@@ -78,7 +91,7 @@ A Linked List is a linear data structure consisting of nodes. Each node stores d
 
 In this project, a linked list is used to store browser history dynamically.
 
-Advantages of Linked List:
+•Advantages of Linked List:
 
 - Supports dynamic memory allocation.
 - Allows insertion and deletion of nodes.
