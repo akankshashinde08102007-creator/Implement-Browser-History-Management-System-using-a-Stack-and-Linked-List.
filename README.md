@@ -1,20 +1,20 @@
 Implement Browser History Management System Using Stack and Linked List
 
-1. Problem Statement
+•Problem Statement
 
 To implement a Browser History Management System using Stack and Linked List in C++.The system allows users to visit new web pages, navigate back to previously visited pages, move forward to the next page, and display browser history. The project demonstrates the practical application of Stack and Linked List data structures in browser navigation.
 
-2. Objectives
+•Objectives
 
 1. To understand the concept of Stack and Linked List.
 2. To implement browser history management using data structures.
-3. To allow users to visit new web pages.
+3.To allow users to visit new web pages.
 4. To provide backward navigation to previously visited pages.
 5. To provide forward navigation to the next page.
 6. To display the browsing history.
 7. To understand the practical application of data structures in real-world systems.
 
-3. Introduction
+• Introduction
 
 A Browser History Management System is an application that simulates the basic history management functionality of a web browser.
 
@@ -26,7 +26,7 @@ In this project, Stack and Linked List are used to manage visited web pages. The
 
 This project helps us understand how data structures are used in practical applications.
 
-4. Algorithm
+•Algorithm
 
 Step 1: Start the program.
 
@@ -58,7 +58,7 @@ Step 11: Repeat the menu until the user selects Exit.
 
 Step 12: Stop the program.
 
-5. Flowchart
+•Flowchart
 
              START
                |
@@ -95,7 +95,7 @@ Step 12: Stop the program.
           v         v
          STOP   Display Menu
 
-6. Data Structures Used
+•Data Structures Used
 
 A. Stack
 
@@ -122,7 +122,7 @@ Advantages of Linked List:
 - Stores data without requiring a fixed-size array.
 - Helps demonstrate dynamic data management.
 
-7. Working of the System
+•Working of the System
 
 The system displays a menu to the user and performs operations according to the selected choice.
 
@@ -134,7 +134,7 @@ The system displays a menu to the user and performs operations according to the 
 
 The program continues running until the user selects the Exit option.
 
-8. Sample Input
+•Sample Input
 
 1. Visit New Page
 2. Go Back
@@ -150,7 +150,7 @@ Enter website name: YouTube
 
 Enter choice: 2
 
-9. Sample Output
+• Sample Output
 
 Page visited: Google
 Page visited: YouTube
@@ -158,7 +158,7 @@ Page visited: YouTube
 Going back...
 Current page: Google
 
-10. Time Complexity
+• Time Complexity
 
 Let n represent the number of stored web pages.
 
@@ -171,7 +171,7 @@ Traverse a linked list| O(n)
 
 Note: The actual time complexity depends on the implementation of the stacks and linked list.
 
-11. Features
+• Features
 
 1. Visit new web pages.
 2. Navigate to the previous page.
@@ -183,7 +183,7 @@ Note: The actual time complexity depends on the implementation of the stacks and
 8. Demonstrate the use of Stack and Linked List.
 9. Simulate basic browser navigation.
 
-12. Applications
+•Applications
 
 1. Web browser history management.
 2. Backward and forward navigation systems.
@@ -191,10 +191,10 @@ Note: The actual time complexity depends on the implementation of the stacks and
 4. Understanding dynamic data structures.
 5. Educational demonstrations of data structures.
 
-13. Result
+•Result
 
 The Browser History Management System demonstrates the implementation of browser navigation using Stack and Linked List in C++. It provides basic operations such as visiting new pages, navigating backward and forward, and displaying browsing history.
 
-14. Conclusion
+• Conclusion
 
 The Browser History Management System is implemented using Stack and Linked List in C++. The project demonstrates how stack operations can be used for backward and forward navigation and how a linked list can store web page information dynamically. It helps us understand the practical application of data structures in real-world systems. This project improves our knowledge of C++ programming, Stack, Linked List, and browser history management.
