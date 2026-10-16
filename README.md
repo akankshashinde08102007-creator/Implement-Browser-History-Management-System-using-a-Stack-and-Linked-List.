@@ -101,7 +101,7 @@ A. Stack
 
 A Stack is a linear data structure that follows the Last In, First Out (LIFO) principle.
 
-In this project, stacks are used to manage backward and forward navigation between web pages.
+In this project,stacks are used to manage backward and forward navigation between web pages.
 
 Basic Stack Operations:
 
