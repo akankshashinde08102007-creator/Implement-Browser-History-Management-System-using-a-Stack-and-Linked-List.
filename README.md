@@ -6,7 +6,7 @@ To implement a Browser History Management System using Stack and Linked List in 
 
 •Objectives
 
-1. To understand the concept of Stack and Linked List.
+1. To understand the concept of Stack and       Linked List.
 2. To implement browser history management using data structures.
 3.To allow users to visit new web pages.
 4. To provide backward navigation to previously visited pages.
