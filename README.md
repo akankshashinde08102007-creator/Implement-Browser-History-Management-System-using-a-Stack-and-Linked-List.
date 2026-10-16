@@ -138,12 +138,17 @@ Current page: Google
 
 Let n represent the number of stored web pages.
 
-Operation| Time Complexity
-Push into Stack| O(1)
-Pop from Stack| O(1)
-Visit a new page| O(1), with suitable stack operations
-Display browser history| O(n)
-Traverse a linked list| O(n)
+Operation            Time Complexity
+
+Push into Stack.          O(1)
+
+Pop from Stac.            O(1)
+
+Visit a new page.         O(1) 
+
+Display browser history.  O(n)
+
+Traverse a linked list.   O(n)
 
 Note: The actual time complexity depends on the implementation of the stacks and linked list.
 
