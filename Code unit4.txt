@@ -1,0 +1,200 @@
+#include <iostream>
+using namespace std;
+
+struct Node {
+    int id;
+    Node* left;
+    Node* right;
+
+    Node(int empID) {
+        id = empID;
+        left = NULL;
+        right = NULL;
+    }
+};
+
+// Insert employee ID into BST
+Node* insert(Node* root, int id) {
+    if (root == NULL) {
+        return new Node(id);
+    }
+
+    if (id < root->id) {
+        root->left = insert(root->left, id);
+    }
+    else if (id > root->id) {
+        root->right = insert(root->right, id);
+    }
+    else {
+        cout << "Employee ID already exists!" << endl;
+    }
+
+    return root;
+}
+
+// Search employee ID
+bool search(Node* root, int id) {
+    if (root == NULL) {
+        return false;
+    }
+
+    if (root->id == id) {
+        return true;
+    }
+
+    if (id < root->id) {
+        return search(root->left, id);
+    }
+
+    return search(root->right, id);
+}
+
+// Display employee IDs in ascending order
+void display(Node* root) {
+    if (root == NULL) {
+        return;
+    }
+
+    display(root->left);
+    cout << root->id << " ";
+    display(root->right);
+}
+
+// Find Lowest Common Ancestor
+Node* findLCA(Node* root, int id1, int id2) {
+    while (root != NULL) {
+        if (id1 < root->id && id2 < root->id) {
+            root = root->left;
+        }
+        else if (id1 > root->id && id2 > root->id) {
+            root = root->right;
+        }
+        else {
+            return root;
+        }
+    }
+
+    return NULL;
+}
+
+int main() {
+    Node* root = NULL;
+    int choice, id, id1, id2, n;
+
+    do {
+        cout << "\nEmployee Hierarchy Search Application" << endl;
+        cout << "1. Insert Employee IDs" << endl;
+        cout << "2. Display Employee IDs" << endl;
+        cout << "3. Search Employee ID" << endl;
+        cout << "4. Find Lowest Common Ancestor" << endl;
+        cout << "5. Count Employees" << endl;
+        cout << "6. Exit" << endl;
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                cout << "How many employee IDs do you want to insert? ";
+                cin >> n;
+
+                if (n <= 0) {
+                    cout << "Invalid number of employees." << endl;
+                    break;
+                }
+
+                for (int i = 0; i < n; i++) {
+                    cout << "Enter employee ID: ";
+                    cin >> id;
+
+                    if (search(root, id)) {
+                        cout << "Employee ID already exists!" << endl;
+                    }
+                    else {
+                        root = insert(root, id);
+                        cout << "Employee ID inserted successfully." << endl;
+                    }
+                }
+                break;
+
+            case 2:
+                if (root == NULL) {
+                    cout << "No employee IDs available." << endl;
+                }
+                else {
+                    cout << "Employee IDs in ascending order: ";
+                    display(root);
+                    cout << endl;
+                }
+                break;
+
+            case 3:
+                cout << "Enter employee ID to search: ";
+                cin >> id;
+
+                if (search(root, id)) {
+                    cout << "Employee ID " << id
+                         << " found in the BST." << endl;
+                }
+                else {
+                    cout << "Employee ID not found." << endl;
+                }
+                break;
+
+            case 4:
+                cout << "Enter first employee ID: ";
+                cin >> id1;
+
+                cout << "Enter second employee ID: ";
+                cin >> id2;
+
+                if (!search(root, id1) || !search(root, id2)) {
+                    cout << "One or both employee IDs not found." << endl;
+                }
+                else {
+                    Node* ans = findLCA(root, id1, id2);
+
+                    cout << "First Employee ID: " << id1 << endl;
+                    cout << "Second Employee ID: " << id2 << endl;
+                    cout << "Lowest Common Ancestor: "
+                         << ans->id << endl;
+                }
+                break;
+
+            case 5:
+                cout << "Total employees: ";
+
+                // Count nodes in the BST
+                {
+                    int count = 0;
+                    // Count using a simple traversal
+                    Node* stack[1000];
+                    int top = -1;
+                    Node* current = root;
+
+                    while (current != NULL || top != -1) {
+                        while (current != NULL) {
+                            stack[++top] = current;
+                            current = current->left;
+                        }
+
+                        current = stack[top--];
+                        count++;
+                        current = current->right;
+                    }
+
+                    cout << count << endl;
+                }
+                break;
+
+            case 6:
+                cout << "Program ended." << endl;
+                break;
+
+            default:
+                cout << "Invalid choice. Please try again." << endl;
+        }
+
+    } while (choice != 6);
+
+    return 0;
+}
