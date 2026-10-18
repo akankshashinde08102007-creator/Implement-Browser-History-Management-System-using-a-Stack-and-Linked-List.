@@ -102,12 +102,12 @@ int main() {
                     break;
                 }
 
-                for (int i = 0; i < n; i++) {
+             for (int i = 0; i < n; i++) {
                     cout << "Enter employee ID: ";
                     cin >> id;
 
                     if (search(root, id)) {
-                        cout << "Employee ID already exists!" << endl;
+cout << "Employee ID already exists!" << endl;
                     }
                     else {
                         root = insert(root, id);
@@ -121,18 +121,18 @@ int main() {
                     cout << "No employee IDs available." << endl;
                 }
                 else {
-                    cout << "Employee IDs in ascending order: ";
+cout << "Employee IDs in ascending order: ";
                     display(root);
                     cout << endl;
                 }
                 break;
 
             case 3:
-                cout << "Enter employee ID to search: ";
+cout << "Enter employee ID to search: ";
                 cin >> id;
 
                 if (search(root, id)) {
-                    cout << "Employee ID " << id
+cout << "Employee ID " << id
                          << " found in the BST." << endl;
                 }
                 else {
