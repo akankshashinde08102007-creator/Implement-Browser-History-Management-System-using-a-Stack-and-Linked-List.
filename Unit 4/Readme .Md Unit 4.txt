@@ -226,5 +226,5 @@ This project provides a practical understanding of Binary Search Trees and the L
 
 By implementing this project in C++, students gain knowledge of node structures, pointers, insertion, searching, and complexity analysis.
 
-The project also explains the importance of choosing a suitable data structure for a particular problem. Thus, it builds a strong foundation for understanding tree-based algorithms and their applications in computer science.Employee Hierarchy Search Application Using a BST to Find the Lowest Common Ancestor
+The project also explains the importance of choosing a suitable data structure for a particular problem. Thus, it builds a strong foundation for understanding tree-based algorithms and their applications in computer science.
 
