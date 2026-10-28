@@ -1,0 +1,118 @@
+#include <iostream>
+using namespace std;
+
+int a[10][10], visited[10], n;
+
+void DFS(int v)
+{
+    int i;
+    visited[v] = 1;
+    cout << v << " ";
+
+    for(i = 0; i < n; i++)
+    {
+        if(a[v][i] == 1 && visited[i] == 0)
+        {
+            DFS(i);
+        }
+    }
+}
+
+int main()
+{
+    int i, j, start, ch;
+
+    cout << "Food Delivery Route Connectivity\n";
+
+    cout << "Enter number of locations: ";
+    cin >> n;
+
+    if(n <= 0 || n > 10)
+    {
+        cout << "Invalid input";
+        return 0;
+    }
+
+    cout << "Enter adjacency matrix:\n";
+
+    for(i = 0; i < n; i++)
+    {
+        for(j = 0; j < n; j++)
+        {
+            cin >> a[i][j];
+        }
+    }
+
+    do
+    {
+        cout << "\n1. Show matrix";
+        cout << "\n2. Show locations";
+        cout << "\n3. Find reachable locations";
+        cout << "\n4. Exit";
+        cout << "\nEnter choice: ";
+        cin >> ch;
+
+        if(ch == 1)
+        {
+            cout << "\nAdjacency Matrix:\n";
+
+            for(i = 0; i < n; i++)
+            {
+                for(j = 0; j < n; j++)
+                {
+                    cout << a[i][j] << " ";
+                }
+                cout << endl;
+            }
+        }
+        else if(ch == 2)
+        {
+            cout << "\nAvailable locations:\n";
+
+            for(i = 0; i < n; i++)
+            {
+                cout << "Location " << i << endl;
+            }
+        }
+        else if(ch == 3)
+        {
+            cout << "Enter starting location: ";
+            cin >> start;
+
+            if(start < 0 || start >= n)
+            {
+                cout << "Invalid location\n";
+                continue;
+            }
+
+            for(i = 0; i < n; i++)
+            {
+                visited[i] = 0;
+            }
+
+            cout << "\nDFS traversal: ";
+            DFS(start);
+
+            cout << "\n\nReachable locations:\n";
+
+            for(i = 0; i < n; i++)
+            {
+                if(visited[i] == 1)
+                {
+                    cout << "Location " << i << endl;
+                }
+            }
+        }
+        else if(ch == 4)
+        {
+            cout << "Program ended.\n";
+        }
+        else
+        {
+            cout << "Wrong choice\n";
+        }
+
+    } while(ch != 4);
+
+    return 0;
+}
